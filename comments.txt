@@ -1,0 +1,22 @@
+Comments:
+Part 1
+1) Indentation in main page
+2) max line in answer
+3) parameters in HTML. For instance, a("text", URL)
+4) how to avoid space in p parameters
+5) Use "" instead of `` ´´. Copy/Paste is possible
+
+Part 2
+1) image with no equal size (150 x 150)
+2) The comment about fluidrow is confusing as it is not required for next exercise.
+3) title = "Submitbutton" is confusing as title is not a parameter
+4) Exercise for "checkbox" instead of checbox
+5) name = ... seems to indicate that the parameter name is "name" when the parameter is "inputId"
+
+Part 3
+1) It is better to introduce fluidRow element now.
+2) Sentence " ... close its parenthesis just before the submitbutton (excluding the two br)." is difficult to understand.
+May be better right after the parentheses that closes the actionButton command.
+3) Indicate that the help text must be inside the fluidRow command
+4) Exercise 4, name it "number"
+

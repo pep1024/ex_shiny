@@ -1,0 +1,45 @@
+Summary
+
+Part 1
+## Main structure
+### ui.R
+shinyUI(fluidPage(
+titlePanel("title panel"),
+sidebarLayout(
+sidebarPanel( "sidebar panel"),
+mainPanel("main panel"))))
+### server.R
+shinyServer(function(input, output) {})
+
+## Format 
+p: A paragraph of text
+h1: A first level header
+h2: A second level header
+a: A hyper link
+br: A line break (e.g. a blank line)
+div: A division of text with a uniform style
+span: An in-line division of text with a uniform style
+pre: Text ‘as is’ in a fixed width font
+code: A formatted block of code
+img: An image
+strong: Bold text
+em: Italicized text
+
+Part 2
+## widgets
+actionButton: Action Button
+checkboxGroupInput: A group of check boxes
+checkboxInput: A single check box
+dateInput: A calendar for date selection
+dateRangeInput: A pair of calendars for selecting a date range
+fileInput: A file upload control wizard
+
+Part 3
+helpText: Help text that can be added to an input form
+numericInput: A field to enter numbers
+radioButtons: A set of radio buttons
+selectInput: A box with choices to select from
+sliderInput: A slider bar
+submitButton: A submit button
+textInput: A field to enter text
+
