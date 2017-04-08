@@ -42,4 +42,59 @@ selectInput: A box with choices to select from
 sliderInput: A slider bar
 submitButton: A submit button
 textInput: A field to enter text
+includeHTML: inludes an HTLM file in the shiny app
+includeText: includes text file (it does not render line breaks)
+
+Part 4
+1) Panels in Shiny
+tabsetPanel(type = "tabs",
+  tabPanel("Data Table",
+    dataTableOutput("Table")
+  ), 
+  tabPanel("Summary",
+    includeHTML("http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html")       
+  ),
+  tabPanel("Text",
+    includeText("../iris.txt")       
+  )
+)
+
+2) in ui.R
+htmlOutput: raw HTML
+imageOutput: image
+plotOutput: plot
+tableOutput: table
+textOutput: text
+uiOutput: raw HTML
+verbatimTextOutput: text
+
+3) server.R
+renderImage: images (saved as a link to a source file)
+renderPlot: plots
+renderPrint: any printed output
+renderTable: data frame, matrix, other table like structures
+renderText: character strings
+renderUI: a Shiny tag object or HTML
+
+4) output$Table <- renderDataTable(iris,
+  options = list(pageLength = 10, searching = FALSE, paging = FALSE))
+
+Part 5
+renderImage
+renderPlot
+renderPrint
+renderText
+
+Include deleteFile = FALSE when renderImage (if not will delete original image from folder)
+When a widget button is included in MainPanel, Nothing is rendered in the Main Panels
+If two buttons have the same name the first is used.
+Render is generated when the submit button is pushed, no matter if the submit button is in the main panel or the side panel.
+
+RenderPrint: render R result as in the console
+RenderText: render it as a text
+
+Part 6
+Render Plot
+RenderUI: not clear why to use it
+
 

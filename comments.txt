@@ -20,3 +20,19 @@ May be better right after the parentheses that closes the actionButton command.
 3) Indicate that the help text must be inside the fluidRow command
 4) Exercise 4, name it "number"
 
+Part 4
+1) Not clear where to include the second tabPanel
+2) Better give a concrete file to upload
+
+Part 5
+1) deleteFile = FALSE (boolean not a string)
+2) not clear why to use: normalizePath(file.path)
+
+Part 6
+1) sum is not a good name for a variable (it is also a function). Summary_iris could be used
+2) Why as.data.frame.array is required? it is not explained
+3) Annotate a plot is not related to Shiny. It is basically an option of plot function. It is confusing.
+4) renderUI use is confusing. Which is the difference i¡using directly the widget?
+5) It looks like the exercise finally does not work once you remove the submitButton.
+6) A new verbatimTextOutput widget is introduced finally in Part 7
+

@@ -56,7 +56,7 @@ shinyUI(
       ),
       mainPanel(
         h1("Main"), br(), br(),
-        img(src="iris_parameters.jpg", height = 150, width = 150),
+        img(src="iris_parameters.jpg", height = 'auto', width = 'auto'),
         p("This famous (Fisher's or Anderson's)", 
           a("iris", href="http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html"),
           "data set gives the measurements in centimeters of the 
@@ -67,6 +67,35 @@ shinyUI(
           strong("virginica."),
           br(),
           h2("Analysis")
+        ),
+        tabsetPanel(type = "tabs",
+          tabPanel("Data Table",
+            dataTableOutput("Table")
+          ), 
+          tabPanel("Summary",
+            dataTableOutput("Table2")
+          ),
+          tabPanel("Text",
+            includeText("../iris.txt")       
+          ),
+          tabPanel("Image",
+            imageOutput("image_1")       
+          ),
+          tabPanel("K-means",
+#            radioButtons("radiobuttons_2", label = h4("Select Image"), 
+#              choices = list("A1" = 1, "A2" = 2)),
+#            imageOutput("image"),
+            plotOutput("plot1", click = "mouse"),
+            verbatimTextOutput("coord"),
+            uiOutput("all"),
+            submitButton("Submit")#,
+#            sliderInput("slider2", label = h4("Clusters"), 3, 10, 3),
+#            textOutput("text1"),
+#            textOutput("text2")
+          ),
+          tabPanel("Iris R Dataset help",
+            includeHTML("http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html")       
+          )
         )
       )
     )
