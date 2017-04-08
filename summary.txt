@@ -97,4 +97,8 @@ Part 6
 Render Plot
 RenderUI: not clear why to use it
 
+Part 7
+Reactive parts: example <- reactive({ })
+reactive creates functions. Therefore, they have to be called as example()
+
 

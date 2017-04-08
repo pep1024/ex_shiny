@@ -33,10 +33,18 @@ shinyServer(
         }
       )
       output$plot1 <- renderPlot({
-        plot(iris$Sepal.Length,iris$Sepal.Width, col = factor(iris$Species))
+        palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
+          "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
+        plot(Data(), col = Clusters()$cluster, pch = 20, cex = 3)
       }, height = "auto", width = "auto")
       output$coord <- renderText({
         paste0("x=", input$mouse$x, "\ny=", input$mouse$y)
+      })
+      Data <- reactive({
+        iris[, c(input$xcol,input$ycol)]
+      })
+      Clusters <- reactive({
+        kmeans(Data(), centers = input$slider1)
       })
       output$all <- renderUI({
         tagList(

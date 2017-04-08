@@ -32,7 +32,12 @@ Part 6
 1) sum is not a good name for a variable (it is also a function). Summary_iris could be used
 2) Why as.data.frame.array is required? it is not explained
 3) Annotate a plot is not related to Shiny. It is basically an option of plot function. It is confusing.
-4) renderUI use is confusing. Which is the difference i¡using directly the widget?
+4) renderUI use is confusing. Which is the difference with using directly the widget?
 5) It looks like the exercise finally does not work once you remove the submitButton.
 6) A new verbatimTextOutput widget is introduced finally in Part 7
+
+Part 7
+1) exercise 1: textinput is in the ui.R not in server.R
+2) To select the 4th variable as default names(iris)[4] is equivalent to names[[4]]
+2) Insist that reactive variables are functions: They must be called with ()
 

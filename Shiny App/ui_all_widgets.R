@@ -41,22 +41,10 @@ shinyUI(
               selected = 2))
         ),
         fluidRow(
-          column(5,
-            checkboxGroupInput("xcol", label = h4("variable X"),
-              choices = names(iris), selected = names(iris)[4]
-            )
-          ),
-          column(7,
-            selectInput("ycol", label = h4("Variable Y"), 
-              names(iris),
-              selected = names(iris)[4], multiple = FALSE)            
-          )
-        ),
-        fluidRow(
           column(6,
             dateInput("date", label = h4("Date Input"), value = "2016-12-01")),
           column(6,
-            sliderInput("slider1", label = h4("Sliders"), 3, 9, 3))
+            sliderInput("slider1", label = h4("Sliders"), 0, 100, c(10, 90)))
         ),
         fluidRow(
           column(6,
@@ -99,8 +87,8 @@ shinyUI(
 #            imageOutput("image"),
             plotOutput("plot1", click = "mouse"),
             verbatimTextOutput("coord"),
-            uiOutput("all")
-#            submitButton("Submit"),
+            uiOutput("all"),
+            submitButton("Submit")#,
 #            sliderInput("slider2", label = h4("Clusters"), 3, 10, 3),
 #            textOutput("text1"),
 #            textOutput("text2")
